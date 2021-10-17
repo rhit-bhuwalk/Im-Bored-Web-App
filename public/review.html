@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+  <link rel="stylesheet" href="styles/bootstrap-material-design.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="styles/main.css">
+  <title>I'm Bored</title>
+</head>
+
+<body id="review-body">
+  <nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="./"><strong>I'm Bored</strong></a>
+
+    <div class="dropdown" id="profile-dropdown" style="display: none;">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="profile-name" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false">
+        Profile Name
+      </button>
+      <div class="dropdown-menu" aria-labelledby="profile-name">
+        <a class="dropdown-item" href="./create.html">Create</a>
+        <a class="dropdown-item" href="./profile.html">Profile</a>
+        <a class="dropdown-item text-danger" id="logout-button">Log Out</a>
+      </div>
+    </div>
+  </nav>
+  <div id="review-page" class="container">
+    <div class="row justify-content-center">
+      <h1 class="text-center mt-2"><strong id="review-title">Loading...</strong></h1>
+    </div>
+    <div class="row justify-content-center">
+      <span id="1-star" class="fa fa-star fa-star-large mx-1 checked"></span>
+      <span id="2-star" class="fa fa-star fa-star-large mx-1 checked"></span>
+      <span id="3-star" class="fa fa-star fa-star-large mx-1 checked"></span>
+      <span id="4-star" class="fa fa-star fa-star-large mx-1 checked"></span>
+      <span id="5-star" class="fa fa-star fa-star-large mx-1 checked"></span>
+    </div>
+    <div class="row justify-content-center">
+      <textarea class="form-control" id="review-text" placeholder="Review" rows="10"></textarea>
+    </div>
+
+    <div class="row justify-content-end">
+      <button class="btn btn-outline-primary mt-4 mr-4" type="button" id="submit-button">Submit</button>
+    </div>
+  </div>
+
+  <script src="scripts/jquery.min.js"></script>
+  <script src="scripts/popper.js"></script>
+  <script src="scripts/bootstrap-material-design.js"></script>
+  <script>
+    $("body").bootstrapMaterialDesign();
+  </script>
+  <script src="/__/firebase/7.18.0/firebase-app.js"></script>
+  <script src="/__/firebase/7.18.0/firebase-analytics.js"></script>
+  <script src="/__/firebase/7.18.0/firebase-auth.js"></script>
+  <script src="/__/firebase/7.18.0/firebase-firestore.js"></script>
+  <script src="/__/firebase/init.js"></script>
+  <script src="scripts/main.js"></script>
+</body>
+
+</html>

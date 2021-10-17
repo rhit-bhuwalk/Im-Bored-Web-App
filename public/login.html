@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+    <link rel="stylesheet" href="styles/bootstrap-material-design.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <title>I'm Bored</title>
+</head>
+
+<body id="login-body">
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="./"><strong>I'm Bored</strong></a>
+    </nav>
+
+    <div id="login-page" class="container">
+        <div class="form-group">
+            <label for="login-email-field">Email address</label>
+            <input type="email" class="form-control" id="login-email-field" placeholder="Enter email" required>
+        </div>
+        <div class="form-group">
+            <label for="login-password-field">Password</label>
+            <input type="password" class="form-control" id="login-password-field" placeholder="Password" required>
+        </div>
+        <button class="btn btn-outline-primary" type="button" id="login-button">Log in to an existing account</button>
+        <hr>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#createAccountModal">
+            Create Account
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="createAccountModal" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Create Account</h5>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="create-username-field">Username</label>
+                            <input type="text" class="form-control" id="create-username-field" placeholder="Enter a username" aria-describedby="usernameHelp" required>
+                            <small id="usernameHelp" class="form-text text-muted">Your username will be public to other users</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="create-email-field">Email address</label>
+                            <input type="email" class="form-control" id="create-email-field" placeholder="Enter email" aria-describedby="emailHelp" required>
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="create-password-field">Password</label>
+                            <input type="password" class="form-control" id="create-password-field" placeholder="Password" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="create-second-password-field">Confirm Password</label>
+                            <input type="password" class="form-control" id="create-second-password-field" placeholder="Confirm Password" required>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-primary" id="create-account-button">Create</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <script src="scripts/jquery.min.js"></script>
+    <script src="scripts/popper.js"></script>
+    <script src="scripts/bootstrap-material-design.js"></script>
+    <script>
+        $("body").bootstrapMaterialDesign();
+    </script>
+    <script src="/__/firebase/7.18.0/firebase-app.js"></script>
+    <script src="/__/firebase/7.18.0/firebase-analytics.js"></script>
+    <script src="/__/firebase/7.18.0/firebase-auth.js"></script>
+    <script src="/__/firebase/7.18.0/firebase-firestore.js"></script>
+    <script src="/__/firebase/init.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>

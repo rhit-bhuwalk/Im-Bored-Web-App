@@ -1,0 +1,74 @@
+/* #activity-body {
+    min-height: 100vh;
+    background: rgb(0, 163, 178);
+    background: linear-gradient(0deg, rgba(0, 163, 178, 1) 0%, rgba(175, 247, 255, 1) 20%, rgba(255, 255, 255, 1) 45%);
+} */
+
+#profile-body, 
+#login-body, 
+#review-body, 
+#home-body,
+#create-body,
+#activity-body {
+    min-height: 100vh;
+    background: rgba(175, 247, 255, 0.2)
+}
+
+.container {
+    max-width: 600px;
+}
+
+#select-group {
+    width: 55%;
+}
+
+.fa-star-large {
+    font-size: 50px;
+
+}
+
+.checked {
+    color: orange;
+}
+
+.dropdown-menu {
+    left: -75px;
+}
+
+.navbar {
+    min-height: 57px;
+}
+
+#review-text {
+    width: 80vw;
+}
+
+@media (min-width: 767.98px) {
+
+    #select-group,
+    #new-activity-name-field {
+        width: 200px;
+    }
+
+    #login-body .container,
+    #review-body .container,
+    #activity-body .container {
+        margin-top: 13vh;
+    }
+
+    #create-body .container {
+        margin-top: 5vh;
+    }
+
+    #home-page > .row {
+        margin-bottom: 20px;
+    }
+
+    #create-page > .row {
+        margin-bottom: 5px;
+    }
+
+    #review-text {
+        width: 37vw;
+    }
+}

@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+    <link rel="stylesheet" href="styles/bootstrap-material-design.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <title>I'm Bored</title>
+</head>
+
+<body id="activity-body">
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="./"><strong>I'm Bored</strong></a>
+        <a class="btn btn-outline-info" type="button" id="login-button" href="login.html"
+            style="display: none;">Login/Sign Up</a>
+
+        <div class="dropdown" id="profile-dropdown" style="display: none;">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="profile-name" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Profile Name
+            </button>
+            <div class="dropdown-menu" aria-labelledby="profile-name">
+                <a class="dropdown-item" href="./create.html">Create</a>
+                <a class="dropdown-item" href="./profile.html">Profile</a>
+                <a class="dropdown-item text-danger" id="logout-button">Log Out</a>
+            </div>
+        </div>
+    </nav>
+
+    <div id="activity-page" class="container">
+        <div class="row justify-content-center">
+            <h2 class="text-center mt-2"><strong id="activity-title">Loading...</strong></h2>
+        </div>
+        <div class="row justify-content-center my-3">
+            <span id="1-star" class="fa fa-star fa-star-large mx-1"></span>
+            <span id="2-star" class="fa fa-star fa-star-large mx-1"></span>
+            <span id="3-star" class="fa fa-star fa-star-large mx-1"></span>
+            <span id="4-star" class="fa fa-star fa-star-large mx-1"></span>
+            <span id="5-star" class="fa fa-star fa-star-large mx-1"></span>
+        </div>
+        <div class="row justify-content-center mt-1">
+            <p id="review-header" class="lead">
+            </p>
+        </div>
+        <div class="row justify-content-center">
+            <a class="btn btn-outline-primary mt-0 mb-3 mx-1" type="button" id="review-button" href="" target="_blank"
+                style="display: none;">Leave a review!</a>
+            <a class="btn btn-outline-danger mt-0 mb-3 mx-1" type="button" data-toggle="modal"
+                data-target="#report-modal">Report</a>
+        </div>
+        <div class="row ml-1">
+            <p class="h4" id="type"></p>
+        </div>
+        <div class="row ml-1">
+            <p class="h4" id="participants"></p>
+        </div>
+        <div id="reviews-container" style="display: none;">
+            <div class="row ml-1">
+                <h2 class="mt-2"><strong>Reviews:</strong></h2>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="report-modal" tabindex="-1" role="dialog" aria-labelledby="report-modal-title"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="report-modal-title">Report this activity</h5>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="report-text">Why are you reporting this activity?</label>
+                        <textarea class="form-control" id="report-text" rows="3"></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary" id="report-button"
+                        data-dismiss="modal">Report</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="scripts/jquery.min.js"></script>
+    <script src="scripts/popper.js"></script>
+    <script src="scripts/bootstrap-material-design.js"></script>
+    <script>
+        $("body").bootstrapMaterialDesign();
+    </script>
+    <script src="/__/firebase/7.18.0/firebase-app.js"></script>
+    <script src="/__/firebase/7.18.0/firebase-analytics.js"></script>
+    <script src="/__/firebase/7.18.0/firebase-auth.js"></script>
+    <script src="/__/firebase/7.18.0/firebase-firestore.js"></script>
+    <script src="/__/firebase/init.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>
